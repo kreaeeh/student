@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "dgmuexgf",
+    "password": "0K2aa-L9CyeyfdA94q8IIc2wtZciRhm3",
+    "database": "dgmuexgf",
+    "host": "pellefant.db.elephantsql.com",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "dgmuexgf",
+    "password": "0K2aa-L9CyeyfdA94q8IIc2wtZciRhm3",
+    "database": "dgmuexgf",
+    "host": "pellefant.db.elephantsql.com",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "dgmuexgf",
+    "password": "0K2aa-L9CyeyfdA94q8IIc2wtZciRhm3",
+    "database": "dgmuexgf",
+    "host": "pellefant.db.elephantsql.com",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}
