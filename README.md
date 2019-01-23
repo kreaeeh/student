@@ -25,3 +25,8 @@ npm start
 ```
 postman/student.postman_collection.json
 ```
+
+## 5) Please note that this app is connected to the teacher app. Some end points won't work if you are not running both
+```
+https://github.com/kreaeeh/teacher.git
+```
