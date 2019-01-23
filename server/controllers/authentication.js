@@ -129,7 +129,6 @@ module.exports = {
             validateObj['errors'].push('Body is null')
         }
     },
-    validateExternalToken,
     validateToken
 
 };
