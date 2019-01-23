@@ -1,0 +1,211 @@
+{
+	"variables": [],
+	"info": {
+		"name": "student",
+		"_postman_id": "893de95b-c395-eee0-0695-3e459530856a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register /student",
+			"request": {
+				"url": "localhost:8000/api/auth/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Abdulrahman\",\n\t\"password\":\"1122\",\n\t\"email\":\"abdulrahman4321@gmail.com\"\n}"
+				},
+				"description": "student\nauthentication"
+			},
+			"response": []
+		},
+		{
+			"name": "Login/student",
+			"request": {
+				"url": "localhost:8000/api/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"abdulrahman4321@gmail.com\",\n\t\"password\":\"1122\"\n}"
+				},
+				"description": "as"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student by ID",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/student?id=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJhYmR1bHJhaG1hbjQzMjFAZ21haWwuY29tIiwibmFtZSI6IkFiZHVscmFobWFuIiwiaWF0IjoxNTQ4MTUwMTQ3LCJleHAiOjE1NDgyMzY1NDd9.xVcXpBg_mnAi20fUBxX0CbDmAvl3boOQzYAFpGWGooc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Monday Assignement\",\n\t\"description\":\"dasdasd00\"\n}"
+				},
+				"description": "as"
+			},
+			"response": []
+		},
+		{
+			"name": "Get students List",
+			"request": {
+				"url": "localhost:8000/api/student",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJhYmR1bHJhaG1hbjQzMjFAZ21haWwuY29tIiwibmFtZSI6IkFiZHVscmFobWFuIiwiaWF0IjoxNTQ4MTUwMTQ3LCJleHAiOjE1NDgyMzY1NDd9.xVcXpBg_mnAi20fUBxX0CbDmAvl3boOQzYAFpGWGooc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Monday Assignement\",\n\t\"description\":\"dasdasd00\"\n}"
+				},
+				"description": "as"
+			},
+			"response": []
+		},
+		{
+			"name": "get list of homework by student id",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/student/assignment?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student",
+						"assignment"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJhYmR1bHJhaG1hbjQzMjFAZ21haWwuY29tIiwibmFtZSI6IkFiZHVscmFobWFuIiwiaWF0IjoxNTQ4MTUwMTQ3LCJleHAiOjE1NDgyMzY1NDd9.xVcXpBg_mnAi20fUBxX0CbDmAvl3boOQzYAFpGWGooc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"homework_id\":\"1\",\n\t\"students\":1\n}"
+				},
+				"description": "Get student's howeworks"
+			},
+			"response": []
+		},
+		{
+			"name": "Submit assignemnt",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/student/assignment",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"student",
+						"assignment"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhYmR1bHJhZGhtYW40ZDMyMUBnbWFpbC5jb20iLCJuYW1lIjoiQWJkdWxyYWhtYW4iLCJpYXQiOjE1NDgwMDg2MzcsImV4cCI6MTU0ODA5NTAzN30.GdiCHuvKnBUTOXphAaSLJ-Sr2ML5PbCW-nWPXBEaanU",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhYmR1bHJhaG1hbjQzMjFAZ21haWwuY29tIiwibmFtZSI6IkFiZHVscmFobWFuIiwiaWF0IjoxNTQ4MTQwNjE1LCJleHAiOjE1NDgyMjcwMTV9.7qE3X4f5fYIYzbpMi1TMKkh-RcailBgfl0wgVXnvrUM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"assignment_id\":\"1\",\n\t\"submitted\":true\n}"
+				},
+				"description": "Assigning homwork to a student\n\nTeacher will choose a list of students ids who he is going to assing the course to them."
+			},
+			"response": []
+		}
+	]
+}
