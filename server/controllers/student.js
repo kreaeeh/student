@@ -5,6 +5,12 @@ const hashConfig = require('../config/hashConfig');
 
 
 module.exports = {
+    /**
+     * Function/Module Name : getStudentList
+     * Purpose : this function is to export student list for (student app or for teacher app)
+     * Input: request, response
+     * Output :  {code : 200 /400, data: []}
+     **/
     getStudentList(req, res) {
         // Check if user exists
         const token = req.headers['x-access-token'];
@@ -20,9 +26,9 @@ module.exports = {
         } else {
             if (student_id) {
                 return User
+                    // get one student
                     .find({attributes: ['id', 'name','email','createdAt','updatedAt'], where: {id: student_id}}) // inserting a user into the db by using sequlize model
                     .then(student => {
-                        // get one homework
                         res.status(201).send({code: 201, data: student});
                     })
                     .catch(error => {
@@ -44,6 +50,12 @@ module.exports = {
 
         }
     },
+    /**
+     * Function/Module Name : getHomeworkByStudentId
+     * Purpose : to get homework assigned to the student from the teacher app
+     * Input: request, response
+     * Output :  {code : 200 /400, data: []}
+     **/
     getHomeworkByStudentId(req, res) {
         // Check if user exists
         const token = req.headers['x-access-token'];
@@ -81,6 +93,12 @@ module.exports = {
             }
         }
     },
+    /**
+     * Function/Module Name : submitAssignment
+     * Purpose : to submit an assignment to the teacher app
+     * Input: request, response
+     * Output :  {code : 200 /400, data: []}
+     **/
     submitAssignment(req, res) {
         const token = req.headers['x-access-token'];
         if (!req.body) {
