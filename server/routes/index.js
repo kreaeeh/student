@@ -2,6 +2,10 @@ const authController = require('../controllers').authentication;
 const studentController = require('../controllers').student;
 
 module.exports = (app) => {
+    app.get('/', (req, res) => res.status(200).send({
+        message: 'Welcome to the our API!',
+    }));
+
     app.get('/api', (req, res) => res.status(200).send({
         message: 'Welcome to the our API!',
     }));
